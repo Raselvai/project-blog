@@ -1,0 +1,196 @@
+/*======================
+   01. Google fonts
+========================*/
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap');
+
+/*======================
+   02. Basic css
+========================*/
+html,
+body,
+div,
+span,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+strong,
+i,
+ol,
+ul,
+li,
+form,
+label,
+footer,
+header,
+menu,
+nav,
+section {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	line-height: 26px;
+	background: #ffffff;
+	color: #888585;
+	font-family: 'Outfit', sans-serif;
+}
+
+ol,
+ul {
+	list-style: none;
+}
+
+a:hover {
+	text-decoration: none;
+}
+
+button:focus, input:focus, textarea:focus {
+	outline: 0;
+}
+
+.project_blog_wrapper {
+	padding: 60px 0;
+}
+
+.head_text {
+	color: #04000b;
+	font-size: 40px;
+	font-weight: 700;
+}
+
+.project_blog_box {
+	overflow: hidden;
+	border-radius: 15px;
+	margin-top: 50px;
+	transition: .3s;
+}
+
+.project_blog_box:hover {
+	box-shadow: 1px 3px 20px rgb(50 48 48 / 56%);
+	transform: translateY(-6px);
+}
+
+.project_blog_box .thumb {
+	overflow: hidden;
+	position: relative;
+	z-index: 1;
+}
+
+.project_blog_box:hover .thumb::before {
+	height: 200%;
+	bottom: 0;
+	opacity: 0.7;
+	visibility: visible;
+}
+
+.project_blog_box .thumb::before {
+	position: absolute;
+	left: 0;
+	bottom: -100px;
+	content: "";
+	height: 50%;
+	width: 100%;
+	background: linear-gradient(90deg, #ff8a43  20%, #fa7070 100%);
+	transform: skewY(48deg);
+	transition: all 0.35s ease-in-out;
+	opacity: 0;
+	visibility: hidden;
+}
+
+.project_blog_box:hover .thumb::after {
+	top: 100%;
+	opacity: 0.6;
+	background: #10393b;
+}
+
+.project_blog_box .thumb::after {
+	position: absolute;
+	left: 0;
+	top: 0;
+	content: "";
+	height: 230px;
+	width: 100%;
+	background: linear-gradient(90deg, #ff8a43  20%, #fa7070 100%);
+	transform: skewY(48deg);
+	transition: all 0.35s ease-in-out;
+	opacity: 0;
+}
+
+.project_blog_box .thumb a {
+    position: absolute;
+    left: 60px;
+    bottom: 30px;
+    height: 50px;
+    width: 50px;
+    line-height: 50px;
+    text-align: center;
+    background: linear-gradient(90deg, #ff8a43  20%, #fa7070 100%);
+    color: #ffffff;
+    border-radius: 50%;
+    z-index: 9;
+    opacity: 0;
+    visibility: hidden;
+    transition: .3s;
+}
+
+.project_blog_box:hover .thumb a {
+	visibility: visible;
+	opacity: 1;
+	left: 30px;
+}
+
+.project_blog_box .content {
+	padding: 30px;
+	border: 1px solid #e7e7e7;
+	border-radius: 0 0 15px 15px;
+}
+
+.project_blog_box .content h4 {
+	margin-bottom: 10px;
+	font-size: 20px;
+}
+
+.project_blog_box .content h4:hover a {
+	color: #ff8a43;
+}
+
+.project_blog_box .content h4 a {
+	color: #04000b;
+	transition: .3s;
+}
+
+.project_blog_box .content ul {
+
+}
+
+.project_blog_box .content ul li {
+	display: inline-block;
+	margin-right: 15px;
+	font-weight: 600;
+	position: relative;
+	z-index: 1;
+	color: #888585;
+}
+
+.project_blog_box .content ul li::after {
+	position: absolute;
+	right: -12px;
+	top: 50%;
+	content: "";
+	height: 5px;
+	width: 5px;
+	background: #aaa3a3;
+	z-index: -1;
+	border-radius: 50%;
+	margin-top: -1px;
+}
+
+.project_blog_box .content ul .last-child::after {
+	display: none;
+}
